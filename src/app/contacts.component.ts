@@ -1,20 +1,9 @@
-import {Component, OnInit} from "@angular/core";
-import {Contact} from "./models/contact";
-import {ContactsService} from "./contacts.service";
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'trm-contacts-app',
   templateUrl: 'contacts.component.html',
   styleUrls: ['contacts.component.css']
 })
-export class ContactsAppComponent implements OnInit{
-
-  contacts:Array<Contact> = [];
-
-  constructor(private contactService:ContactsService){
-  }
-
-  ngOnInit():void {
-      this.contacts = this.contactService.getContacts();
-  }
+export class ContactsAppComponent{
 }
