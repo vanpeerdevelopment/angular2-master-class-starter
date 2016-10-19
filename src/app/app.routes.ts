@@ -6,5 +6,5 @@ import {ContactsEditorComponent} from "./contacts-editor/contacts-editor.compone
 export const ContactsAppRoutes:Routes = [
   {path: '', component: ContactsListComponent},
   {path: 'detail/:id', component: ContactsDetailComponent},
-  {path: 'contact/:id/edit', component: ContactsEditorComponent}
+  {path: 'detail/:id/edit', component: ContactsEditorComponent}
 ];
