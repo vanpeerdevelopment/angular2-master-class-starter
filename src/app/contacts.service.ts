@@ -12,16 +12,23 @@ export class ContactsService {
   constructor(private http:Http){
   }
 
+  find(id:number | string):Observable<Contact> {
+    return this.http
+      .get(`${this.API_ENDPOINT}/api/contacts/${id}`)
+      .map(response => response.json())
+      .map(data => data.item);
+  }
+
   getContacts():Observable<Array<Contact>> {
       return this.http
-      .get(this.API_ENDPOINT + '/api/contacts')
+      .get(`${this.API_ENDPOINT}/api/contacts`)
       .map(response => response.json())
       .map(data => data.items);
   }
 
-  find(id:number | string):Observable<Contact> {
+  updateContact(contact:Contact):Observable<Contact> {
     return this.http
-      .get(this.API_ENDPOINT + '/api/contacts/' + id)
+      .put(`${this.API_ENDPOINT}/api/contacts/${contact.id}`, contact)
       .map(response => response.json())
       .map(data => data.item);
   }
