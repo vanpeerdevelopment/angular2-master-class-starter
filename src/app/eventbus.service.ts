@@ -1,7 +1,9 @@
+import {Injectable} from "@angular/core";
 import {Subject} from "rxjs/Subject";
 
 import {EventBusArgs} from "./models/eventbus";
 
+@Injectable()
 export class EventBusService {
 
   private _messages$ = new Subject<EventBusArgs>();

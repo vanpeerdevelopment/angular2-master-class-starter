@@ -8,7 +8,7 @@ import {EventBusService} from "./eventbus.service";
 })
 export class ContactsAppComponent implements OnInit {
 
-  title:String = 'Contacts';
+  title:String;
 
   constructor(private eventBus:EventBusService) {
   }

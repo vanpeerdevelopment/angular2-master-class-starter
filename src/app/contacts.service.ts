@@ -1,6 +1,5 @@
-import {Injectable, Inject} from '@angular/core';
+import {Injectable, Inject} from "@angular/core";
 import {Contact} from "./models/contact";
-import {CONTACT_DATA} from "./data/contact-data";
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Rx";
 import {API_ENDPOINT} from "./app.tokens";
