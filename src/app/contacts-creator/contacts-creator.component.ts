@@ -16,6 +16,6 @@ export class ContactsCreatorComponent {
   save(contact:Contact) {
     this.contactsService
       .addContact(contact)
-      .subscribe(() => this.router.navigate(["/"]));
+      .subscribe(() => this.router.navigate(['/']));
   }
 }

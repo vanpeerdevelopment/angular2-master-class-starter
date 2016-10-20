@@ -9,7 +9,7 @@ import {Title} from "@angular/platform-browser";
 })
 export class ContactsAppComponent implements OnInit {
 
-  title:String;
+  title:String = 'Contacts';
 
   constructor(private eventBus:EventBusService,
               private titleService:Title) {
