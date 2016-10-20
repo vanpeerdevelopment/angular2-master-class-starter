@@ -32,7 +32,14 @@ export class ContactsService {
       .map(data => data.item);
   }
 
-  search(term:string):Observable<Array<Contact>> {
+  search(terms:Observable<string>, debounceMs = 400):Observable<Array<Contact>> {
+    return terms
+      .debounceTime(debounceMs)
+      .distinctUntilChanged()
+      .switchMap(term => this.rawSearch(term));
+  }
+
+  rawSearch(term:string):Observable<Array<Contact>> {
     return this.http
       .get(`${this.apiEndpoint}/search?text=${term}`)
       .map(response => response.json())
