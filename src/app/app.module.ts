@@ -10,6 +10,7 @@ import "rxjs/add/operator/takeUntil";
 import "rxjs/add/operator/delay";
 import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
+import "rxjs/add/operator/filter";
 
 import {ContactsAppComponent} from "./contacts.component";
 import {ContactsHeaderComponent} from "./contacts-header/contacts-header.component";
