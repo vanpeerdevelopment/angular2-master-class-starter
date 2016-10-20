@@ -19,8 +19,8 @@ export class ContactsService {
   }
 
   getContacts():Observable<Array<Contact>> {
-      return this.http
-        .get(`${this.apiEndpoint}/contacts`)
+    return this.http
+      .get(`${this.apiEndpoint}/contacts`)
       .map(response => response.json())
       .map(data => data.items);
   }
@@ -30,5 +30,12 @@ export class ContactsService {
       .put(`${this.apiEndpoint}/contacts/${contact.id}`, contact)
       .map(response => response.json())
       .map(data => data.item);
+  }
+
+  search(term:string):Observable<Array<Contact>> {
+    return this.http
+      .get(`${this.apiEndpoint}/search?text=${term}`)
+      .map(response => response.json())
+      .map(data => data.items);
   }
 }
