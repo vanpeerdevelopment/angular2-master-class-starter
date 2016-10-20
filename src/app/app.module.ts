@@ -14,17 +14,19 @@ import "rxjs/add/operator/distinctUntilChanged";
 import {ContactsAppComponent} from "./contacts.component";
 import {ContactsHeaderComponent} from "./contacts-header/contacts-header.component";
 import {ContactsListComponent} from "./contacts-list/contacts-list.component";
-import {ContactsDetailComponent} from "./contacts-detail/contacts-detail.component";
+import {ContactsDetailViewComponent} from "./contacts-detail-view/contacts-detail-view.component";
 import {ContactsAppRoutes} from "./app.routes";
 import {ContactsEditorComponent} from "./contacts-editor/contacts-editor.component";
 import {APP_PROVIDERS} from "./app.providers";
+import {ContactDetailsComponent} from "./contact-details/contact-details.component";
 
 @NgModule({
   declarations: [
     ContactsAppComponent,
     ContactsHeaderComponent,
     ContactsListComponent,
-    ContactsDetailComponent,
+    ContactsDetailViewComponent,
+    ContactDetailsComponent,
     ContactsEditorComponent
   ],
   imports: [
