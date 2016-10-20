@@ -44,4 +44,11 @@ export class ContactsService {
       .map(response => response.json())
       .map(data => data.items);
   }
+
+  addContact(contact:Contact):Observable<Contact> {
+    return this.http
+      .post(`${this.apiEndpoint}/contacts`, contact)
+      .map(response => response.json())
+      .map(data => data.item);
+  }
 }

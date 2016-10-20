@@ -20,6 +20,7 @@ import {ContactsAppRoutes} from "./app.routes";
 import {ContactsEditorComponent} from "./contacts-editor/contacts-editor.component";
 import {APP_PROVIDERS} from "./app.providers";
 import {ContactDetailsComponent} from "./contact-details/contact-details.component";
+import {ContactsCreatorComponent} from "./contacts-creator/contacts-creator.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ContactDetailsComponent} from "./contact-details/contact-details.compone
     ContactsListComponent,
     ContactsDetailViewComponent,
     ContactDetailsComponent,
-    ContactsEditorComponent
+    ContactsEditorComponent,
+    ContactsCreatorComponent
   ],
   imports: [
     BrowserModule,
