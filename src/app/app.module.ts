@@ -28,7 +28,10 @@ import {ContactsEditorComponent} from "./contacts-editor/contacts-editor.compone
     HttpModule,
     FormsModule
   ],
-  providers: [ContactsService],
+  providers: [
+    ContactsService,
+    {provide: 'apiEndpoint', useValue: 'http://localhost:4201/api'}
+  ],
   bootstrap: [ContactsAppComponent]
 })
 export class ContactsModule {
