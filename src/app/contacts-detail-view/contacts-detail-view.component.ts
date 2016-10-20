@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {ContactsService} from '../contacts.service';
-import {Contact} from '../models/contact';
+import {Component, OnInit} from "@angular/core";
+import {ActivatedRoute, Router} from "@angular/router";
+import {ContactsService} from "../contacts.service";
+import {Contact} from "../models/contact";
 import {EventBusService} from "../eventbus.service";
 
 @Component({
@@ -12,7 +12,10 @@ export class ContactsDetailViewComponent implements OnInit {
 
   contact:Contact;
 
-  constructor(private route:ActivatedRoute, private router:Router, private contactsService:ContactsService, private eventBus:EventBusService) {
+  constructor(private route:ActivatedRoute,
+              private router:Router,
+              private contactsService:ContactsService,
+              private eventBus:EventBusService) {
   }
 
   ngOnInit() {

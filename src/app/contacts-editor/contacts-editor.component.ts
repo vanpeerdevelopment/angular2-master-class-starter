@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {ContactsService} from "../contacts.service";
 import {Contact} from "../models/contact";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -12,7 +12,10 @@ export class ContactsEditorComponent implements OnInit {
 
   contact:Contact = <Contact>{address: {}};
 
-  constructor(private contactsSerivce:ContactsService, private route:ActivatedRoute, private router:Router, private eventBus:EventBusService) {
+  constructor(private contactsSerivce:ContactsService,
+              private route:ActivatedRoute,
+              private router:Router,
+              private eventBus:EventBusService) {
   }
 
   ngOnInit() {
