@@ -3,11 +3,12 @@ import {Contact} from "./models/contact";
 import {CONTACT_DATA} from "./data/contact-data";
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Rx";
+import {API_ENDPOINT} from "./app.tokens";
 
 @Injectable()
 export class ContactsService {
 
-  constructor(private http:Http, @Inject('apiEndpoint') private apiEndpoint) {
+  constructor(private http:Http, @Inject(API_ENDPOINT) private apiEndpoint) {
   }
 
   find(id:number | string):Observable<Contact> {
