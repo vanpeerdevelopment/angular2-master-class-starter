@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ContactsService} from "../contacts.service";
 import {Contact} from "../models/contact";
-import {Observable, Subject} from "rxjs/Rx";
+import {Subject} from "rxjs/Subject";
+import {Observable} from "rxjs/Rx";
 
 @Component({
   selector: 'trm-contacts-list',
