@@ -5,8 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'trm-contacts-editor',
-  templateUrl: 'contacts-editor.component.html',
-  styleUrls: ['contacts-editor.component.css']
+  templateUrl: 'contacts-editor.component.html'
 })
 export class ContactsEditorComponent implements OnInit {
 

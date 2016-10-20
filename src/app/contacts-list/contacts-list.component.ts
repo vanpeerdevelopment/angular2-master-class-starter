@@ -6,8 +6,7 @@ import {Observable} from "rxjs/Rx";
 
 @Component({
   selector: 'trm-contacts-list',
-  templateUrl: 'contacts-list.component.html',
-  styleUrls: ['contacts-list.component.css']
+  templateUrl: 'contacts-list.component.html'
 })
 export class ContactsListComponent implements OnInit {
 

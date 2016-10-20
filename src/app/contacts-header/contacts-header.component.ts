@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'trm-contacts-header',
-  templateUrl: 'contacts-header.component.html',
-  styleUrls: ['contacts-header.component.css']
+  templateUrl: 'contacts-header.component.html'
 })
-export class ContactsHeaderComponent implements OnInit {
-
-  constructor() {}
-
-  ngOnInit() {
-  }
-
+export class ContactsHeaderComponent {
 }
